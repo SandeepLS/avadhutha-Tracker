@@ -17,27 +17,27 @@ import { getAuth } from "firebase/auth";
 // };
 
 /**sachinvanja793@gmail.com */
-const firebaseConfig = {
-  apiKey: "AIzaSyAZ9FupUW22C_1AM4RuYEsoHP20OurZNfY",
-  authDomain: "tracker-3f3dc.firebaseapp.com",
-  projectId: "tracker-3f3dc",
-  storageBucket: "tracker-3f3dc.appspot.com",
-  messagingSenderId: "640381289111",
-  appId: "1:640381289111:web:521bdd3669ee4b3ef91fd2",
-  measurementId: "G-L9G0BQG27Q",
-  recaptcha_site_key: "YOUR_RECAPTCHA_SITE_KEY_HERE"
-};
-
 // const firebaseConfig = {
-//   apiKey: "AIzaSyBNU-ppCxFXUdUa3pUE7OlLBVTguFzwPO4",
-//   authDomain: "avadhutha-tracker.firebaseapp.com",
-//   projectId: "avadhutha-tracker",
-//   storageBucket: "avadhutha-tracker.appspot.com",
-//   messagingSenderId: "87712398613",
-//   appId: "1:87712398613:web:a91eb9d14b55c80f12bd1c",
-//   measurementId: "G-N3H6HC417D",
-//   recaptcha_site_key: "YOUR_RECAPTCHA_SITE_KEY_HERE" // Add your Recaptcha API key here
+//   apiKey: "AIzaSyAZ9FupUW22C_1AM4RuYEsoHP20OurZNfY",
+//   authDomain: "tracker-3f3dc.firebaseapp.com",
+//   projectId: "tracker-3f3dc",
+//   storageBucket: "tracker-3f3dc.appspot.com",
+//   messagingSenderId: "640381289111",
+//   appId: "1:640381289111:web:521bdd3669ee4b3ef91fd2",
+//   measurementId: "G-L9G0BQG27Q",
+//   recaptcha_site_key: "YOUR_RECAPTCHA_SITE_KEY_HERE"
 // };
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBNU-ppCxFXUdUa3pUE7OlLBVTguFzwPO4",
+  authDomain: "avadhutha-tracker.firebaseapp.com",
+  projectId: "avadhutha-tracker",
+  storageBucket: "avadhutha-tracker.appspot.com",
+  messagingSenderId: "87712398613",
+  appId: "1:87712398613:web:a91eb9d14b55c80f12bd1c",
+  measurementId: "G-N3H6HC417D",
+  recaptcha_site_key: "YOUR_RECAPTCHA_SITE_KEY_HERE" // Add your Recaptcha API key here
+};
 
 /**Sandeepls6361@gmail.com */
 // const firebaseConfig = {

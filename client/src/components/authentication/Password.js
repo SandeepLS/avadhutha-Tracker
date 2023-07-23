@@ -4,6 +4,7 @@ import avathar from '../../assets/avathar2.svg';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import { passwordValidate } from '../../helper/validate';
+import axios from 'axios'
 
 import styles from '../../styles/Username.module.css';
 
@@ -17,7 +18,20 @@ export default function Password() {
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit : async values => {
-      console.log(values)
+      const dataToSend = {
+        userName: localStorage.getItem('username'),
+        password: values.password,
+      };
+      axios.post(`http://localhost:3010/login`, dataToSend)
+      .then((response) => {
+        console.log('Response:', response.data);
+        alert('Login Successful')
+        window.location.href = '/map'
+      })
+      .catch((error) => {
+        console.error('Error:', error.response ? error.response.data : error.message);
+        alert("Wrong Password")
+      }); 
       
     }
   })
@@ -35,9 +49,9 @@ export default function Password() {
         <div className={styles.glass}>
 
           <div className='title flex flex-col items-center'>
-            <h4 className='text-5xl font-bold'>Hello world</h4>
+            <h4 className='text-5xl font-bold'>  Password</h4>
             <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
-              Explore More by connecting with us.
+            Authentication
             </span>
           </div>
           {/* className={styles} */}

@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import { usernameValidate } from '../../helper/validate';
 
+
 import styles from '../../styles/Username.module.css';
 
 export default function Username() {
@@ -20,6 +21,8 @@ export default function Username() {
       console.log(values)
       // setUsername(values.username);
       // navigate('/password')
+      localStorage.setItem('username', values.username)
+      window.location.href = '/password'
     }
   })
 
@@ -50,9 +53,8 @@ export default function Username() {
 
               <div className="textbox flex flex-col items-center gap-6">
                   <input {...formik.getFieldProps('username')} className={styles.textbox} type="text" placeholder='Username' />
-                  <button className={styles.btn} type='submit'>Let's Go</button>
+                  <button className={styles.btn} type='submit' >Let's Go</button>
               </div>
-
               <div className="text-center py-4">
                 <span className='text-gray-500'>Not a Member? <Link className='text-red-500' to='/register'>Register Now</Link></span>
               </div>

@@ -7,6 +7,7 @@ import { useFormik } from 'formik';
 import { registerValidation } from '../../helper/validate';
 import convertToBase64 from '../../helper/convert';
 import OtpInput from "otp-input-react";
+import axios from 'axios'
 
 /** Phone Input */
 import PhoneInput from "react-phone-input-2";
@@ -95,8 +96,19 @@ export default function Register() {
     validateOnChange: false,
     onSubmit : async values => {
       values = await Object.assign(values, { profile : file || ''})
-      console.log(values)
-      
+      const dataToSend = {
+        userName: values.username,
+        password: values.password,
+        email: values.email
+      };
+      axios.post(`http://localhost:3010/register`, dataToSend)
+      .then((response) => {
+        console.log('Response:', response.data);
+        alert('Registration Successfully')
+      })
+      .catch((error) => {
+        console.error('Error:', error.response ? error.response.data : error.message);
+      }); 
     }
   })
 
@@ -136,7 +148,7 @@ export default function Register() {
                 <img src={file || avathar} className={styles.profile_img} alt="avatar" />
                 </label>
 
-                <input onChange={onUpload} type='file' id='profile' name='profile'/>  
+                <input onChange={onUpload} type='file' id='' name='profile'/>  
               </div>
             
               <div className="textbox flex flex-col items-center gap-2">
