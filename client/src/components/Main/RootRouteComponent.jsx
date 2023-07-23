@@ -1,7 +1,8 @@
 import React from 'react'
+import Username from '../authentication/Username';
 
 const RootRouteComponent = () => {
-  return <div>RootRouteComponent</div>;
+  return <Username>RootRouteComponent</Username>;
   
 };
 

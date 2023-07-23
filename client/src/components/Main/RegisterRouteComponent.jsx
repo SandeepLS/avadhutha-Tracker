@@ -1,7 +1,8 @@
 import React from 'react'
+import Register from '../authentication/Register';
 
 const RegisterRouteComponent = () => {
-  return <div>RegisterRouteComponent</div>;
+  return <Register>RegisterRouteComponent</Register>;
   
 };
 
